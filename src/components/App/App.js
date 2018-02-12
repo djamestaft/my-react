@@ -7,7 +7,6 @@ export class App extends Component {
   state = {
     gameStarted: false,
     gameFinished: false,
-    gameReset: false
   }
 
   startBtnHandler = () => {
@@ -15,7 +14,7 @@ export class App extends Component {
   }
 
   resetBtnHandler = () => {
-
+    this.setState({gameStarted: false});
   }
  
   render() {
