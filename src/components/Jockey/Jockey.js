@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import classes from './Jockey.css';
-import Progress from 'react-progressbar';
+import ProgressBar from 'react-progressbar';
 
 export class Jockey extends Component {
     
     state = {
-        interval: Math.floor(Math.random() * 1000),
+        interval: Math.floor(Math.random() * 500),
         progress: 0
     }
 
@@ -22,7 +22,7 @@ export class Jockey extends Component {
         return ( 
             <div className="Jockey">
                 <img src={ this.props.avatar } alt="The Jockey" />
-                <Progress completed={ this.state.progress } color={this.props.color}/>
+                <ProgressBar completed={ this.state.progress } color={this.props.color}/>
             </div>
         );
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../images/logo.svg';
 import './App.css';
 import { Race } from '../Race';
 
@@ -12,22 +11,18 @@ export class App extends Component {
   }
 
   startBtnHandler = () => {
-
+    this.setState({gameStarted: true});
   }
 
   resetBtnHandler = () => {
 
-  }
-
-  progressUpdater = () => {
-    
   }
  
   render() {
     return (
       <div className="App">
         <div className="Track">
-          <Race />
+          <Race gameStarted={this.state.gameStarted}/>
         </div>
         <button onClick={this.startBtnHandler}>Start Race!</button>
         <button onClick={this.resetBtnHandler}>Reset</button>
