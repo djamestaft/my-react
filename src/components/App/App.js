@@ -1,19 +1,36 @@
 import React, { Component } from 'react';
 import logo from '../../images/logo.svg';
 import './App.css';
+import { Race } from '../Race';
 
 export class App extends Component {
+
+  state = {
+    gameStarted: false,
+    gameFinished: false,
+    gameReset: false
+  }
+
+  startBtnHandler = () => {
+
+  }
+
+  resetBtnHandler = () => {
+
+  }
+
+  progressUpdater = () => {
+    
+  }
+ 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-          <h2 className="App-sub-title">Kurtosys Grads</h2>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/components/App/App.js</code> and save to reload.
-        </p>
+        <div className="Track">
+          <Race />
+        </div>
+        <button onClick={this.startBtnHandler}>Start Race!</button>
+        <button onClick={this.resetBtnHandler}>Reset</button>
       </div>
     );
   }
