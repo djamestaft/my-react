@@ -3,10 +3,10 @@ import './App.css';
 import { Race } from '../Race';
 
 export class App extends Component {
-
+  
   state = {
     gameStarted: false,
-    gameFinished: false,
+    gameFinished: false
   }
 
   startBtnHandler = () => {
@@ -21,10 +21,10 @@ export class App extends Component {
     return (
       <div className="App">
         <div className="Track">
-          <Race gameStarted={this.state.gameStarted}/>
+          <Race gameStarted ={this.state.gameStarted}/>
         </div>
-        <button onClick={this.startBtnHandler}>Start Race!</button>
-        <button onClick={this.resetBtnHandler}>Reset</button>
+        <button className="Start" onClick={this.startBtnHandler}>Start Race!</button>
+        <button className="Reset" onClick={this.resetBtnHandler}>Reset</button>
       </div>
     );
   }
